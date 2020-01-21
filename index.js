@@ -13,7 +13,7 @@ function helpEmbed(channel) {
     .setTitle('Available Help Messages:')
     .setAuthor('JoyConDroid', avatarImageUrl, joyConDroidAppUrl)
     .addField('$jc disconnect', 'Explains what do you need to do to fix disconnects.')
-    .addField('$jc compatiblity', 'Explains which devices are compatible.')
+    .addField('$jc compatibility', 'Explains which devices are compatible.')
     .addField('$jc gamepad', 'Explains how to connect a gamepad.');
   channel.send(helpEmbed);
 }
@@ -86,7 +86,7 @@ client.on('message', msg => {
       if(command === 'disconnect') {
         disconnectEmbed(msg.channel);
       }
-      if(command === 'compatiblity') {
+      if(command === 'compatibility') {
         compatiblityEmbed(msg.channel);
       }
       if(command === 'gamepad') {
