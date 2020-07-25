@@ -72,7 +72,7 @@ function gamepadEmbed(channel) {
 }
 
 client.on("ready", () => {
-  client.user.setActivity("Help $jc", { type: "PLAYING"});
+  client.user.setActivity("Help: $jc help", { type: "PLAYING"});
 })
 
 client.on('message', msg => {
@@ -91,6 +91,9 @@ client.on('message', msg => {
       }
       if(command === 'gamepad') {
         gamepadEmbed(msg.channel);
+      }
+      if(command === 'help') {
+        helpEmbed(msg.channel);
       }
     }
   }
